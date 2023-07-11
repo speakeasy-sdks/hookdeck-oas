@@ -7,6 +7,19 @@ info:
     name: Hookdeck Support
     url: https://hookdeck.com/contact-us
     email: info@hookdeck.com
+x-speakeasy-name-override:
+  - operationId: ^get.*
+    methodNameOverride: get
+  - operationId: ^post.*
+    methodNameOverride: create
+  - operationId: ^put.*
+    methodNameOverride: update
+  - operationId: ^delete.*
+    methodNameOverride: delete
+  - operationId: ^patch.*
+    methodNameOverride: patch
+  - operationId: ^list.*
+    methodNameOverride: list
 components:
   securitySchemes:
     bearerAuth:
