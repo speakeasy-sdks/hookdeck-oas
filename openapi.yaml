@@ -7,19 +7,6 @@ info:
     name: Hookdeck Support
     url: https://hookdeck.com/contact-us
     email: info@hookdeck.com
-x-speakeasy-name-override:
-  - operationId: ^get.*
-    methodNameOverride: get
-  - operationId: ^post.*
-    methodNameOverride: create
-  - operationId: ^put.*
-    methodNameOverride: update
-  - operationId: ^delete.*
-    methodNameOverride: delete
-  - operationId: ^patch.*
-    methodNameOverride: patch
-  - operationId: ^list.*
-    methodNameOverride: list
 components:
   securitySchemes:
     bearerAuth:
@@ -2675,6 +2662,7 @@ paths:
       operationId: getIssueTriggers
       summary: Get Issue Triggers
       description: Retrieve a list of issue triggers.
+      x-speakeasy-name-overrides: getIssueTriggers
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2796,6 +2784,7 @@ paths:
       operationId: createIssueTrigger
       summary: Create an Issue Trigger
       description: Create a new issue trigger.
+      x-speakeasy-name-overrides: createIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2848,6 +2837,7 @@ paths:
       operationId: upsertIssueTrigger
       summary: Create or Update an Issue Trigger
       description: Create or update an existing issue trigger.
+      x-speakeasy-name-overrides: upsertIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2902,6 +2892,7 @@ paths:
       operationId: getIssueTrigger
       summary: Get an Issue Trigger
       description: Get a single issue trigger details.
+      x-speakeasy-name-overrides: getIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2929,6 +2920,7 @@ paths:
       operationId: updateIssueTrigger
       summary: Update an Issue Trigger
       description: Update the details of an issue trigger.
+      x-speakeasy-name-overrides: updateIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2987,6 +2979,7 @@ paths:
       operationId: deleteIssueTrigger
       summary: Delete an Issue Trigger
       description: Delete an existing issue trigger.
+      x-speakeasy-name-overrides: deleteIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -3015,6 +3008,7 @@ paths:
       operationId: disableIssueTrigger
       summary: Disable an Issue Trigger
       description: Disable an existing issue trigger.
+      x-speakeasy-name-overrides: disableIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -3043,6 +3037,7 @@ paths:
       operationId: enableIssueTrigger
       summary: Enable an Issue Trigger
       description: Enable an existing issue trigger.
+      x-speakeasy-name-overrides: enableIssueTrigger
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -3071,6 +3066,7 @@ paths:
       operationId: getAttempts
       summary: Get Attempts
       description: Retrieve a list of attempts.
+      x-speakeasy-name-overrides: getAttempts
       tags:
         - Attempts
       x-speakeasy-group: Attempts
@@ -3165,6 +3161,7 @@ paths:
       operationId: getAttempt
       summary: Get a Single Attempt
       description: Retrive a single attempt details.
+      x-speakeasy-name-overrides: getAttempt
       tags:
         - Attempts
       x-speakeasy-group: Attempts
@@ -3193,6 +3190,7 @@ paths:
       operationId: getBookmarks
       summary: Get Bookmarks
       description: Retrieve a list of bookmarks.
+      x-speakeasy-name-overrides: getBookmarks
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3374,6 +3372,7 @@ paths:
       operationId: createBookmark
       summary: Create a Bookmark
       description: Create a new bookmark.
+      x-speakeasy-name-overrides: createBookmark
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3431,6 +3430,7 @@ paths:
       operationId: getBookmark
       summary: Get a Single Bookmark
       description: Retrieve an existing bookmark details.
+      x-speakeasy-name-overrides: getBookmark
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3458,6 +3458,7 @@ paths:
       operationId: updateBookmark
       summary: Update a Bookmark
       description: Update an existing bookmark information.
+      x-speakeasy-name-overrides: updateBookmark
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3522,6 +3523,7 @@ paths:
       operationId: deleteBookmark
       summary: Delete a Bookmark
       description: Delete an existing bookmark
+      x-speakeasy-name-overrides: deleteBookmark
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3550,6 +3552,7 @@ paths:
       operationId: triggerBookmark
       summary: Trigger a Bookmark
       description: Trigger a bookmark operation to store and replay a specific request.
+      x-speakeasy-name-overrides: triggerBookmark
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3604,6 +3607,7 @@ paths:
       operationId: getDestinations
       summary: Get Destinations
       description: Retrieve a list of endpoints to which your webhooks can be routed.
+      x-speakeasy-name-overrides: getDestinations
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -3789,6 +3793,7 @@ paths:
       operationId: createDestination
       summary: Create a Destination
       description: Create a new endpoint to which your webhooks can be routed.
+      x-speakeasy-name-overrides: createDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -3871,6 +3876,7 @@ paths:
       operationId: upsertDestination
       summary: Update or Create a Destination
       description: Update or create a new endpoint to which your webhooks can be routed.
+      x-speakeasy-name-overrides: upsertDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -3954,6 +3960,7 @@ paths:
       operationId: getDestination
       summary: Get a Destination
       description: Retrieve an endpoint to which your webhooks can be routed.
+      x-speakeasy-name-overrides: getDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -3987,6 +3994,7 @@ paths:
       operationId: updateDestination
       summary: Update a Destination
       description: Update an existing endpoint to which your webhooks can be routed.
+      x-speakeasy-name-overrides: updateDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -4079,6 +4087,7 @@ paths:
       operationId: deleteDestination
       summary: Delete a Destination
       description: Delete an endpoint to which your webhooks can be routed.
+      x-speakeasy-name-overrides: deleteDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -4113,6 +4122,7 @@ paths:
       operationId: archiveDestination
       summary: Archive a Destination
       description: Archive an unused endpoint.
+      x-speakeasy-name-overrides: archiveDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -4141,6 +4151,7 @@ paths:
       operationId: unarchiveDestination
       summary: Unarchive a Destination
       description: Unarchive an endpoint.
+      x-speakeasy-name-overrides: unarchiveDestination
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -4169,6 +4180,7 @@ paths:
       operationId: getEvents
       summary: Get Events
       description: Retrieve a list of requests that Hookdeck receives from a source.
+      x-speakeasy-name-overrides: getEvents
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4573,6 +4585,7 @@ paths:
       operationId: getEvent
       summary: Get an Event
       description: Retrieve a request that Hookdeck receives from a source.
+      x-speakeasy-name-overrides: getEvent
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4601,6 +4614,7 @@ paths:
       operationId: getEventRawBody
       summary: Get an Event Raw Body Data
       description: Retrieve a raw body data of a request that Hookdeck receives from a source.
+      x-speakeasy-name-overrides: getEventRawBody
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4629,6 +4643,7 @@ paths:
       operationId: retryEvent
       summary: Retry an Event
       description: Retry the operation to retrieve a request that Hookdeck receives from a specific source.
+      x-speakeasy-name-overrides: retryEvent
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4657,6 +4672,7 @@ paths:
       operationId: muteEvent
       summary: Mute an Event
       description: Mute a request that Hookdeck receives from a specific source. 
+      x-speakeasy-name-overrides: muteEvent
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4685,6 +4701,7 @@ paths:
       operationId: getEventBulkRetries
       summary: Get Events Bulk Retries
       description: Attempt to reprocess multiple events simultaneously in a batch.
+      x-speakeasy-name-overrides: getEventBulkRetries
       tags:
         - Bulk retry events
       x-speakeasy-group: BulkRetryEvents
