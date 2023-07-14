@@ -2620,6 +2620,47 @@ servers:
           - '2021-08-01'
           - '2020-01-01'
         default: '2023-01-01'
+x-speakeasy-name-override:
+  - operationId: ^get.*
+    methodNameOverride: get
+  - operationId: ^create.*
+    methodNameOverride: create
+  - operationId: ^upsert.*
+    methodNameOverride: upsert
+  - operationId: ^update.*
+    methodNameOverride: update
+  - operationId: ^disable.*
+    methodNameOverride: disable
+  - operationId: ^enable.*
+    methodNameOverride: enable
+  - operationId: ^delete.*
+    methodNameOverride: delete
+  - operationId: ^trigger.*
+    methodNameOverride: trigger
+  - operationId: ^generate.*
+    methodNameOverride: generate
+  - operationId: ^cancel.*
+    methodNameOverride: cancel
+  - operationId: ^dismiss.*
+    methodNameOverride: dismiss
+  - operationId: ^retry.*
+    methodNameOverride: retry
+  - operationId: ^archive.*
+    methodNameOverride: archive
+  - operationId: ^unarchive.*
+    methodNameOverride: unarchive
+  - operationId: ^toggle.*
+    methodNameOverride: toggle
+  - operationId: ^add.*
+    methodNameOverride: add
+  - operationId: ^list.*
+    methodNameOverride: list
+  - operationId: ^test.*
+    methodNameOverride: test
+  - operationId: ^pause.*
+    methodNameOverride: pause
+  - operationId: ^unpause.*
+    methodNameOverride: unpause
 security:
   - bearerAuth: []
   - basicAuth: []
@@ -2662,7 +2703,6 @@ paths:
       operationId: getIssueTriggers
       summary: Get Issue Triggers
       description: Retrieve a list of issue triggers.
-      x-speakeasy-name-overrides: getIssueTriggers
       tags:
         - Issue Triggers
       x-speakeasy-group: IssueTriggers
@@ -2784,10 +2824,9 @@ paths:
       operationId: createIssueTrigger
       summary: Create an Issue Trigger
       description: Create a new issue trigger.
-      x-speakeasy-name-overrides: createIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -2837,10 +2876,9 @@ paths:
       operationId: upsertIssueTrigger
       summary: Create or Update an Issue Trigger
       description: Create or update an existing issue trigger.
-      x-speakeasy-name-overrides: upsertIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -2892,10 +2930,9 @@ paths:
       operationId: getIssueTrigger
       summary: Get an Issue Trigger
       description: Get a single issue trigger details.
-      x-speakeasy-name-overrides: getIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -2920,10 +2957,9 @@ paths:
       operationId: updateIssueTrigger
       summary: Update an Issue Trigger
       description: Update the details of an issue trigger.
-      x-speakeasy-name-overrides: updateIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -2979,10 +3015,9 @@ paths:
       operationId: deleteIssueTrigger
       summary: Delete an Issue Trigger
       description: Delete an existing issue trigger.
-      x-speakeasy-name-overrides: deleteIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: An object with deleted issue trigger's id
@@ -3008,10 +3043,9 @@ paths:
       operationId: disableIssueTrigger
       summary: Disable an Issue Trigger
       description: Disable an existing issue trigger.
-      x-speakeasy-name-overrides: disableIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -3037,10 +3071,9 @@ paths:
       operationId: enableIssueTrigger
       summary: Enable an Issue Trigger
       description: Enable an existing issue trigger.
-      x-speakeasy-name-overrides: enableIssueTrigger
       tags:
         - Issue Triggers
-      x-speakeasy-group: IssueTriggers
+      x-speakeasy-group: IssueTrigger
       responses:
         '200':
           description: A single issue trigger
@@ -3066,7 +3099,6 @@ paths:
       operationId: getAttempts
       summary: Get Attempts
       description: Retrieve a list of attempts.
-      x-speakeasy-name-overrides: getAttempts
       tags:
         - Attempts
       x-speakeasy-group: Attempts
@@ -3161,10 +3193,9 @@ paths:
       operationId: getAttempt
       summary: Get a Single Attempt
       description: Retrive a single attempt details.
-      x-speakeasy-name-overrides: getAttempt
       tags:
         - Attempts
-      x-speakeasy-group: Attempts
+      x-speakeasy-group: Attempt
       responses:
         '200':
           description: A single attempt
@@ -3190,7 +3221,6 @@ paths:
       operationId: getBookmarks
       summary: Get Bookmarks
       description: Retrieve a list of bookmarks.
-      x-speakeasy-name-overrides: getBookmarks
       tags:
         - Bookmarks
       x-speakeasy-group: Bookmarks
@@ -3372,10 +3402,9 @@ paths:
       operationId: createBookmark
       summary: Create a Bookmark
       description: Create a new bookmark.
-      x-speakeasy-name-overrides: createBookmark
       tags:
         - Bookmarks
-      x-speakeasy-group: Bookmarks
+      x-speakeasy-group: Bookmark
       responses:
         '200':
           description: A single bookmark
@@ -3430,10 +3459,9 @@ paths:
       operationId: getBookmark
       summary: Get a Single Bookmark
       description: Retrieve an existing bookmark details.
-      x-speakeasy-name-overrides: getBookmark
       tags:
         - Bookmarks
-      x-speakeasy-group: Bookmarks
+      x-speakeasy-group: Bookmark
       responses:
         '200':
           description: A single bookmark
@@ -3458,10 +3486,9 @@ paths:
       operationId: updateBookmark
       summary: Update a Bookmark
       description: Update an existing bookmark information.
-      x-speakeasy-name-overrides: updateBookmark
       tags:
         - Bookmarks
-      x-speakeasy-group: Bookmarks
+      x-speakeasy-group: Bookmark
       responses:
         '200':
           description: A single bookmark
@@ -3523,10 +3550,9 @@ paths:
       operationId: deleteBookmark
       summary: Delete a Bookmark
       description: Delete an existing bookmark
-      x-speakeasy-name-overrides: deleteBookmark
       tags:
         - Bookmarks
-      x-speakeasy-group: Bookmarks
+      x-speakeasy-group: Bookmark
       responses:
         '200':
           description: An object with deleted bookmark's id
@@ -3552,10 +3578,9 @@ paths:
       operationId: triggerBookmark
       summary: Trigger a Bookmark
       description: Trigger a bookmark operation to store and replay a specific request.
-      x-speakeasy-name-overrides: triggerBookmark
       tags:
         - Bookmarks
-      x-speakeasy-group: Bookmarks
+      x-speakeasy-group: Bookmark
       responses:
         '200':
           description: Array of created events
@@ -3607,7 +3632,6 @@ paths:
       operationId: getDestinations
       summary: Get Destinations
       description: Retrieve a list of endpoints to which your webhooks can be routed.
-      x-speakeasy-name-overrides: getDestinations
       tags:
         - Destinations
       x-speakeasy-group: Destinations
@@ -3793,10 +3817,9 @@ paths:
       operationId: createDestination
       summary: Create a Destination
       description: Create a new endpoint to which your webhooks can be routed.
-      x-speakeasy-name-overrides: createDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -3876,10 +3899,9 @@ paths:
       operationId: upsertDestination
       summary: Update or Create a Destination
       description: Update or create a new endpoint to which your webhooks can be routed.
-      x-speakeasy-name-overrides: upsertDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -3960,10 +3982,9 @@ paths:
       operationId: getDestination
       summary: Get a Destination
       description: Retrieve an endpoint to which your webhooks can be routed.
-      x-speakeasy-name-overrides: getDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -3994,10 +4015,9 @@ paths:
       operationId: updateDestination
       summary: Update a Destination
       description: Update an existing endpoint to which your webhooks can be routed.
-      x-speakeasy-name-overrides: updateDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -4087,10 +4107,9 @@ paths:
       operationId: deleteDestination
       summary: Delete a Destination
       description: Delete an endpoint to which your webhooks can be routed.
-      x-speakeasy-name-overrides: deleteDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -4122,10 +4141,9 @@ paths:
       operationId: archiveDestination
       summary: Archive a Destination
       description: Archive an unused endpoint.
-      x-speakeasy-name-overrides: archiveDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -4151,10 +4169,9 @@ paths:
       operationId: unarchiveDestination
       summary: Unarchive a Destination
       description: Unarchive an endpoint.
-      x-speakeasy-name-overrides: unarchiveDestination
       tags:
         - Destinations
-      x-speakeasy-group: Destinations
+      x-speakeasy-group: Destination
       responses:
         '200':
           description: A single destination
@@ -4180,7 +4197,6 @@ paths:
       operationId: getEvents
       summary: Get Events
       description: Retrieve a list of requests that Hookdeck receives from a source.
-      x-speakeasy-name-overrides: getEvents
       tags:
         - Events
       x-speakeasy-group: Events
@@ -4585,10 +4601,9 @@ paths:
       operationId: getEvent
       summary: Get an Event
       description: Retrieve a request that Hookdeck receives from a source.
-      x-speakeasy-name-overrides: getEvent
       tags:
         - Events
-      x-speakeasy-group: Events
+      x-speakeasy-group: Event
       responses:
         '200':
           description: A single event
@@ -4614,10 +4629,9 @@ paths:
       operationId: getEventRawBody
       summary: Get an Event Raw Body Data
       description: Retrieve a raw body data of a request that Hookdeck receives from a source.
-      x-speakeasy-name-overrides: getEventRawBody
       tags:
         - Events
-      x-speakeasy-group: Events
+      x-speakeasy-group: EventRawBody
       responses:
         '200':
           description: A request raw body data
@@ -4643,10 +4657,9 @@ paths:
       operationId: retryEvent
       summary: Retry an Event
       description: Retry the operation to retrieve a request that Hookdeck receives from a specific source.
-      x-speakeasy-name-overrides: retryEvent
       tags:
         - Events
-      x-speakeasy-group: Events
+      x-speakeasy-group: Event
       responses:
         '200':
           description: Retried event with event attempt
@@ -4672,10 +4685,9 @@ paths:
       operationId: muteEvent
       summary: Mute an Event
       description: Mute a request that Hookdeck receives from a specific source. 
-      x-speakeasy-name-overrides: muteEvent
       tags:
         - Events
-      x-speakeasy-group: Events
+      x-speakeasy-group: Event
       responses:
         '200':
           description: A single event
@@ -4700,8 +4712,7 @@ paths:
     get:
       operationId: getEventBulkRetries
       summary: Get Events Bulk Retries
-      description: Attempt to reprocess multiple events simultaneously in a batch.
-      x-speakeasy-name-overrides: getEventBulkRetries
+      description: ''
       tags:
         - Bulk retry events
       x-speakeasy-group: BulkRetryEvents
@@ -5225,6 +5236,7 @@ paths:
       description: ''
       tags:
         - Bulk retry events
+      x-speakeasy-group: BulkRetryEvent
       responses:
         '200':
           description: A single events bulk retry
@@ -5536,6 +5548,7 @@ paths:
       description: ''
       tags:
         - Bulk retry events
+      x-speakeasy-group: BulkRetryEvent
       responses:
         '200':
           description: Events bulk retry plan
@@ -5841,6 +5854,7 @@ paths:
       description: ''
       tags:
         - Bulk retry events
+      x-speakeasy-group: BulkRetryEvent
       responses:
         '200':
           description: A single events bulk retry
@@ -5868,6 +5882,7 @@ paths:
       description: ''
       tags:
         - Bulk retry events
+      x-speakeasy-group: BulkRetryEvent
       responses:
         '200':
           description: A single events bulk retry
@@ -5895,6 +5910,7 @@ paths:
       description: ''
       tags:
         - Bulk retry ignored events
+      x-speakeasy-group: BulkRetryIgnoredEvents
       responses:
         '200':
           description: List of ignored events bulk retries
@@ -6114,6 +6130,7 @@ paths:
       description: ''
       tags:
         - Bulk retry ignored events
+      x-speakeasy-group: BulkRetryIgnoredEvent
       responses:
         '200':
           description: A single ignored events bulk retry
@@ -6177,6 +6194,7 @@ paths:
       description: ''
       tags:
         - Bulk retry ignored events
+      x-speakeasy-group: BulkRetryIgnoredEvent
       responses:
         '200':
           description: Ignored events bulk retry plan
@@ -6234,6 +6252,7 @@ paths:
       description: ''
       tags:
         - Bulk retry ignored events
+      x-speakeasy-group: BulkRetryIgnoredEvent
       responses:
         '200':
           description: A single ignored events bulk retry
@@ -6261,6 +6280,7 @@ paths:
       description: ''
       tags:
         - Bulk retry ignored events
+      x-speakeasy-group: BulkRetryIgnoredEvent
       responses:
         '200':
           description: A single ignored events bulk retry
@@ -6288,6 +6308,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integrations
       responses:
         '200':
           description: List of integrations
@@ -6323,6 +6344,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: A single integration
@@ -6383,6 +6405,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: A single integration
@@ -6409,6 +6432,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: A single integration
@@ -6480,6 +6504,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: An object with deleted integration id
@@ -6507,6 +6532,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: Attach operation success status
@@ -6546,6 +6572,7 @@ paths:
       description: ''
       tags:
         - Integrations
+      x-speakeasy-group: Integration
       responses:
         '200':
           description: Detach operation success status
@@ -6585,6 +6612,7 @@ paths:
       description: ''
       tags:
         - Issues
+      x-speakeasy-group: Issues
       responses:
         '200':
           description: List of issues
@@ -6901,6 +6929,7 @@ paths:
       description: ''
       tags:
         - Issues
+      x-speakeasy-group: IssuesCount
       responses:
         '200':
           description: Issue count
@@ -7211,6 +7240,7 @@ paths:
       description: ''
       tags:
         - Issues
+      x-speakeasy-group: Issue
       responses:
         '200':
           description: A single issue
@@ -7237,6 +7267,7 @@ paths:
       description: ''
       tags:
         - Issues
+      x-speakeasy-group: Issue
       responses:
         '200':
           description: Updated issue
@@ -7287,6 +7318,7 @@ paths:
       description: ''
       tags:
         - Issues
+      x-speakeasy-group: Issue
       responses:
         '200':
           description: Dismissed issue
@@ -7314,6 +7346,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: Requests
       responses:
         '200':
           description: List of requests
@@ -7629,6 +7662,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: Request
       responses:
         '200':
           description: A single request
@@ -7656,6 +7690,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: RequestRawBody
       responses:
         '200':
           description: A request raw body data
@@ -7683,6 +7718,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: Request
       responses:
         '200':
           description: Retry request operation result
@@ -7739,6 +7775,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: RequestEvents
       responses:
         '200':
           description: List of events
@@ -8154,6 +8191,7 @@ paths:
       description: ''
       tags:
         - Requests
+      x-speakeasy-group: RequestIgnoredEvents
       responses:
         '200':
           description: List of ignored events
@@ -8259,6 +8297,7 @@ paths:
       description: ''
       tags:
         - Bulk retry requests
+      x-speakeasy-group: BulkRetryRequests
       responses:
         '200':
           description: List of request bulk retries
@@ -8703,6 +8742,7 @@ paths:
       description: ''
       tags:
         - Bulk retry requests
+      x-speakeasy-group: BulkRetryRequests
       responses:
         '200':
           description: A single requests bulk retry
@@ -8941,6 +8981,7 @@ paths:
       description: ''
       tags:
         - Bulk retry requests
+      x-speakeasy-group: RequestBulkRetryPlan
       responses:
         '200':
           description: Requests bulk retry plan
@@ -9173,6 +9214,7 @@ paths:
       description: ''
       tags:
         - Bulk retry requests
+      x-speakeasy-group: RequestBulkRetry
       responses:
         '200':
           description: A single requests bulk retry
@@ -9200,6 +9242,7 @@ paths:
       description: ''
       tags:
         - Bulk retry requests
+      x-speakeasy-group: RequestBulkRetry
       responses:
         '200':
           description: A single requests bulk retry
@@ -9227,6 +9270,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Rulesets
       responses:
         '200':
           description: List of rulesets
@@ -9432,6 +9476,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9480,6 +9525,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9529,6 +9575,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9555,6 +9602,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9614,6 +9662,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9641,6 +9690,7 @@ paths:
       description: ''
       tags:
         - Rulesets
+      x-speakeasy-group: Ruleset
       responses:
         '200':
           description: A single ruleset
@@ -9668,6 +9718,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Sources
       responses:
         '200':
           description: List of sources
@@ -9837,6 +9888,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -9882,6 +9934,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -9928,6 +9981,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -9954,6 +10008,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -10009,6 +10064,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -10042,6 +10098,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -10069,6 +10126,7 @@ paths:
       description: ''
       tags:
         - Sources
+      x-speakeasy-group: Source
       responses:
         '200':
           description: A single source
@@ -10096,6 +10154,7 @@ paths:
       description: ''
       tags:
         - Notifications
+      x-speakeasy-group: WebhookNotifications
       responses:
         '200':
           description: Toggle operation status response
@@ -10130,6 +10189,7 @@ paths:
       description: ''
       tags:
         - Notifications
+      x-speakeasy-group: CustomDomain
       responses:
         '200':
           description: Custom domain successfuly added
@@ -10155,6 +10215,7 @@ paths:
       description: ''
       tags:
         - Notifications
+      x-speakeasy-group: CustomDomains
       responses:
         '200':
           description: List of custom domains
@@ -10175,6 +10236,7 @@ paths:
       description: ''
       tags:
         - Notifications
+      x-speakeasy-group: CustomDomain
       responses:
         '200':
           description: Custom domain successfuly removed
@@ -10200,6 +10262,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformations
       responses:
         '200':
           description: List of transformations
@@ -10305,6 +10368,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformation
       responses:
         '200':
           description: A single transformation
@@ -10360,6 +10424,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformation
       responses:
         '200':
           description: A single transformation
@@ -10416,6 +10481,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformation
       responses:
         '200':
           description: A single transformation
@@ -10442,6 +10508,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformation
       responses:
         '200':
           description: A single transformation
@@ -10507,6 +10574,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: Transformation
       responses:
         '200':
           description: Transformation run output
@@ -10600,6 +10668,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: TransformationExecutions
       responses:
         '200':
           description: List of transformation executions
@@ -10757,6 +10826,7 @@ paths:
       description: ''
       tags:
         - Transformations
+      x-speakeasy-group: TransformationExecution
       responses:
         '200':
           description: A single transformation execution
@@ -10790,6 +10860,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connections
       responses:
         '200':
           description: List of connections
@@ -11005,6 +11076,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11153,6 +11225,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11302,6 +11375,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11334,6 +11408,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11414,6 +11489,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11447,6 +11523,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11474,6 +11551,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11501,6 +11579,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
@@ -11528,6 +11607,7 @@ paths:
       description: ''
       tags:
         - Connections
+      x-speakeasy-group: Connection
       responses:
         '200':
           description: A single connection
