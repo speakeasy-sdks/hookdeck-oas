@@ -2698,6 +2698,10 @@ tags:
   - name: Connections
     description: A connection lets you route webhooks from a source to a destination, using a ruleset.
 paths:
+x-speakeasy-errors:
+  statusCodes: # Defines status codes to handle as errors for all operations.
+    - 4XX
+    - 5XX
   /issue-triggers:
     get:
       operationId: getIssueTriggers
