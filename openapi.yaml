@@ -11073,12 +11073,14 @@ paths:
             type: string
             maxLength: 255
             description: The ID to provide in the query to get the next set of results
+          x-speakeasy-ignore: true
         - in: query
           name: prev
           schema:
             type: string
             maxLength: 255
             description: The ID to provide in the query to get the previous set of results
+          x-speakeasy-ignore: true
     post:
       operationId: createConnection
       summary: Create a connection
