@@ -2538,6 +2538,7 @@ components:
             $ref: '#/components/schemas/TransformationExecution'
       additionalProperties: false
     Connection:
+      x-speakeasy-entity: Connection
       type: object
       properties:
         id:
@@ -10865,6 +10866,7 @@ paths:
       tags:
         - Connections
       x-speakeasy-group: Connections
+      x-speakeasy-entity-operation: Connection#get
       responses:
         '200':
           description: List of connections
@@ -10956,6 +10958,7 @@ paths:
           schema:
             type: boolean
             description: Include archived resources in the response
+          x-speakeasy-match: IsTeamDefault
         - in: query
           name: archived_at
           schema:
@@ -10992,6 +10995,7 @@ paths:
             pattern: ^[a-z0-9-_>\s]+$
             maxLength: 155
             description: Fuzzy match the concatenated source and connection name. The source name and connection name must be separated by " -> "
+          x-speakeasy-match: Name
         - in: query
           name: paused_at
           schema:
@@ -11062,6 +11066,7 @@ paths:
             minimum: 0
             maximum: 255
             description: Result set size
+          x-speakeasy-ignore: true
         - in: query
           name: next
           schema:
@@ -11081,6 +11086,7 @@ paths:
       tags:
         - Connections
       x-speakeasy-group: Connection
+      x-speakeasy-entity-operation: Connection#create
       responses:
         '200':
           description: A single connection
@@ -11229,7 +11235,7 @@ paths:
       description: ''
       tags:
         - Connections
-      x-speakeasy-group: Connection
+      x-speakeasy-group: Connection#update
       responses:
         '200':
           description: A single connection
@@ -11380,6 +11386,7 @@ paths:
       tags:
         - Connections
       x-speakeasy-group: Connection
+      x-speakeasy-entity-operation: Connection#get
       responses:
         '200':
           description: A single connection
@@ -11494,6 +11501,7 @@ paths:
       tags:
         - Connections
       x-speakeasy-group: Connection
+      x-speakeasy-entity-operation: Connection#delete
       responses:
         '200':
           description: A single connection
