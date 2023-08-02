@@ -172,6 +172,7 @@ components:
       description: Notification channels object for the specific channel type
     IssueTrigger:
       type: object
+      x-speakeasy-entity: IssueTrigger
       properties:
         id:
           type: string
@@ -845,6 +846,7 @@ components:
       description: Config for the destination's auth method
     Destination:
       type: object
+      x-speakeasy-entity: Destination
       properties:
         id:
           type: string
@@ -2202,6 +2204,7 @@ components:
       description: Custom response object
     Source:
       type: object
+      x-speakeasy-entity: Source
       properties:
         id:
           type: string
@@ -2827,6 +2830,7 @@ paths:
             description: The ID to provide in the query to get the previous set of results
     post:
       operationId: createIssueTrigger
+      x-speakeasy-entity-operation: IssueTrigger#create
       summary: Create an Issue Trigger
       description: Create a new issue trigger.
       tags:
@@ -2933,6 +2937,7 @@ paths:
   /issue-triggers/{id}:
     get:
       operationId: getIssueTrigger
+      x-speakeasy-entity-operation: IssueTrigger#get
       summary: Get an Issue Trigger
       description: Get a single issue trigger details.
       tags:
@@ -3018,6 +3023,7 @@ paths:
               additionalProperties: false
     delete:
       operationId: deleteIssueTrigger
+      x-speakeasy-entity-operation: IssueTrigger#delete
       summary: Delete an Issue Trigger
       description: Delete an existing issue trigger.
       tags:
@@ -3820,6 +3826,7 @@ paths:
             description: The ID to provide in the query to get the previous set of results
     post:
       operationId: createDestination
+      x-speakeasy-entity-operation: Destination#create
       summary: Create a Destination
       description: Create a new endpoint to which your webhooks can be routed.
       tags:
@@ -3985,6 +3992,7 @@ paths:
   /destinations/{id}:
     get:
       operationId: getDestination
+      x-speakeasy-entity-operation: Destination#get
       summary: Get a Destination
       description: Retrieve an endpoint to which your webhooks can be routed.
       tags:
@@ -4110,6 +4118,7 @@ paths:
               additionalProperties: false
     delete:
       operationId: deleteDestination
+      x-speakeasy-entity-operation: Destination#delete
       summary: Delete a Destination
       description: Delete an endpoint to which your webhooks can be routed.
       tags:
@@ -9889,6 +9898,7 @@ paths:
             description: The ID to provide in the query to get the previous set of results
     post:
       operationId: createSource
+      x-speakeasy-entity-operation: Source#create
       summary: Create a source
       description: ''
       tags:
@@ -9982,6 +9992,7 @@ paths:
   /sources/{id}:
     get:
       operationId: getSource
+      x-speakeasy-entity-operation: Source#get
       summary: Get a source
       description: ''
       tags:
@@ -10065,6 +10076,7 @@ paths:
               additionalProperties: false
     delete:
       operationId: deleteSource
+      x-speakeasy-entity-operation: Source#delete
       summary: Delete a source
       description: ''
       tags:
@@ -10369,6 +10381,7 @@ paths:
             description: The ID to provide in the query to get the previous set of results
     post:
       operationId: createTransformation
+      x-speakeasy-entity-operation: Transformation#create
       summary: Create a transformation
       description: ''
       tags:
@@ -10482,6 +10495,7 @@ paths:
   /transformations/{id}:
     get:
       operationId: getTransformation
+      x-speakeasy-entity-operation: Transformation#get
       summary: Get a transformation
       description: ''
       tags:
